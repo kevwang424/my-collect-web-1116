@@ -32,13 +32,13 @@ describe "my_collect" do
 
   it "yields the correct element from the given collection, in this case students" do
     my_collect(students) do |student|
-      expect(student).to_not eq(nil)
+      expect(students).to_not eq(nil)
     end
   end
 
   it "returns a new collection of appropriately modified elements, in this case student first names" do
-    expect(my_collect(students) do |language|
-      student.split(" ").first
+    expect(my_collect(students) do |students|
+      students.split(" ").first
     end).to eq(["Tim", "Tom", "Sophie", "Antoin"])
   end
 
